@@ -128,8 +128,14 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 			}
 		
 		var questions;
-		if(data.getJSON().data.questions==undefined){questions = 0;}
-		else {questions = data.getJSON().data.questions.length}
+		if(data.getJSON().data.questions==undefined){
+			questions = 0;
+			}
+		else {
+			if (data.getJSON().data.questions[0].answer==undefined){
+				questions = 1;
+				}
+			}
 		
 		var documents;
 		var documentsChange="";
@@ -157,11 +163,12 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 					}		
 			}
 			
-			
-	if(awards>lots){
-		console.log(tender_id+" "+lots+" "+awards+" контракт "+amount+" нижча "+lowerPrice+" вища "+higherPrice+" стартова "+startAmount+" changeLength "+changeLength)		
+	/*		
+	if(questions>0){
+		//console.log(tender_id+" "+lots+" "+awards+" контракт "+amount+" нижча "+lowerPrice+" вища "+higherPrice+" стартова "+startAmount+" changeLength "+changeLength)		
+		console.log(tender_id+" "+questions)		
 	}
-	
+	*/
 	//////////tenders AND db//////////////	
 	
 db.serialize(function() {
