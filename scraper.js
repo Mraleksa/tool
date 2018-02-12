@@ -9,7 +9,7 @@ var db = new sqlite3.Database("data.sqlite");
 
 //db.each("SELECT dateModified FROM data ORDER BY dateModified DESC LIMIT 1", function(err, timeStart) {
 
-var start =  "2018-02-01T23:54:43.887726+02:00" 
+var start =  "2018-02-05T14:00:23.921779+02:00" 
 //var end  = formatTime(new Date());
 //var end  = "2017-01-03"
 var p=0; var p2=0;
