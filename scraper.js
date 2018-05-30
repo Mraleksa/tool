@@ -1,5 +1,5 @@
 var client = require('http-api-client');
-//var d3 = require("d3");
+var lodash = require("lodash");
 var sqlite3 = require("sqlite3").verbose();
 var db = new sqlite3.Database("data.sqlite");
 
@@ -117,12 +117,12 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 		var save=Math.round((startAmount-amount)/startAmount*100);
 		
 		
-		console.log(save);
-		var numberOfBids;
-		if(isNaN(data.getJSON().data.numberOfBids)){numberOfBids = 1}
-		else {numberOfBids=data.getJSON().data.numberOfBids};
+		//console.log(save);
+		//var numberOfBids;
+		//if(isNaN(data.getJSON().data.numberOfBids)){numberOfBids = 1}
+		//else {numberOfBids=data.getJSON().data.numberOfBids};
 			
-			/*
+			
 			var bids_id=[];
 					if(data.getJSON().data.bids){
 						var bids = data.getJSON().data.bids.length;
@@ -139,12 +139,12 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 					var numberOfBids = lodash.uniq(bids_id).length;
 			
 			console.log(bids_id+" - "+bids+" - "+numberOfBids);
-			*/
 			
 			
-		var bids;
-		if(data.getJSON().data.bids==undefined){bids = 1;}
-		else {bids = data.getJSON().data.bids.length}
+			
+		//var bids;
+		//if(data.getJSON().data.bids==undefined){bids = 1;}
+		//else {bids = data.getJSON().data.bids.length}
 			
 		var awards = data.getJSON().data.awards.length;
 		
@@ -231,7 +231,7 @@ statement.finalize();
 	})
 	.then(function () {	
 	
-	if (p<2){setTimeout(function() {piv ();},10000);}		
+	if (p<5){setTimeout(function() {piv ();},10000);}		
 		else {
 			console.log("stop")
 			
