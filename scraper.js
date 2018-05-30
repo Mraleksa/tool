@@ -21,7 +21,7 @@ db.close();
 
 //db.each("SELECT dateModified FROM data ORDER BY dateModified DESC LIMIT 1", function(err, timeStart) {
 
-var start =  "2018-05-17T18:51:18.238441+03:00" 
+var start =  "2018-05-18T09:33:31.065953+03:00" 
 //var end  = formatTime(new Date());
 //var end  = "2017-01-03"
 var p=0; var p2=0;
@@ -118,10 +118,10 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 		
 		
 		
-		var numberOfBids;
-		if(isNaN(data.getJSON().data.numberOfBids)){numberOfBids = 1}
-		else {numberOfBids=data.getJSON().data.numberOfBids};
-			/*
+		//var numberOfBids;
+		//if(isNaN(data.getJSON().data.numberOfBids)){numberOfBids = 1}
+		//else {numberOfBids=data.getJSON().data.numberOfBids};
+			
 			var bids_id=[];
 					if(data.getJSON().data.bids){
 						var bids = data.getJSON().data.bids.length;
@@ -136,13 +136,13 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 						}	
 					}else {var bids =0}
 					var numberOfBids = lodash.uniq(bids_id).length;
-			*/
 			
 			
 			
-		var bids;
-		if(data.getJSON().data.bids==undefined){bids = 1;}
-		else {bids = data.getJSON().data.bids.length}
+			
+		//var bids;
+		//if(data.getJSON().data.bids==undefined){bids = 1;}
+		//else {bids = data.getJSON().data.bids.length}
 			
 		var awards = data.getJSON().data.awards.length;
 		
