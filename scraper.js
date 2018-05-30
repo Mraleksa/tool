@@ -118,10 +118,11 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 		
 		
 		
-		//var numberOfBids;
-		//if(isNaN(data.getJSON().data.numberOfBids)){numberOfBids = 1}
-		//else {numberOfBids=data.getJSON().data.numberOfBids};
-		var bids_id=[];
+		var numberOfBids;
+		if(isNaN(data.getJSON().data.numberOfBids)){numberOfBids = 1}
+		else {numberOfBids=data.getJSON().data.numberOfBids};
+			/*
+			var bids_id=[];
 					if(data.getJSON().data.bids){
 						var bids = data.getJSON().data.bids.length;
 						
@@ -135,7 +136,7 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 						}	
 					}else {var bids =0}
 					var numberOfBids = lodash.uniq(bids_id).length;
-			
+			*/
 			
 			
 			
@@ -228,7 +229,7 @@ statement.finalize();
 	})
 	.then(function () {	
 	
-	if (p<10){setTimeout(function() {piv ();},10000);}		
+	if (p<5){setTimeout(function() {piv ();},10000);}		
 		else {
 			console.log("stop")
 			
