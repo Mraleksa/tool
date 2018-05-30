@@ -137,7 +137,8 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 					}else {var bids =0}
 					var numberOfBids = lodash.uniq(bids_id).length;
 			
-			console.log(bids_id+" - "+bids+" - "+numberOfBids)
+			console.log(bids_id+" - "+bids+" - "+numberOfBids);
+			console.log(save);
 			
 			
 		//var bids;
@@ -229,7 +230,7 @@ statement.finalize();
 	})
 	.then(function () {	
 	
-	if (p<5){setTimeout(function() {piv ();},10000);}		
+	if (p<2){setTimeout(function() {piv ();},10000);}		
 		else {
 			console.log("stop")
 			
