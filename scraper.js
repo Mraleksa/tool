@@ -117,7 +117,7 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 		var save=Math.round((startAmount-amount)/startAmount*100);
 		
 		
-		
+		console.log(save);
 		//var numberOfBids;
 		//if(isNaN(data.getJSON().data.numberOfBids)){numberOfBids = 1}
 		//else {numberOfBids=data.getJSON().data.numberOfBids};
@@ -138,7 +138,7 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 					var numberOfBids = lodash.uniq(bids_id).length;
 			
 			console.log(bids_id+" - "+bids+" - "+numberOfBids);
-			console.log(save);
+			
 			
 			
 		//var bids;
