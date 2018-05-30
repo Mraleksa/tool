@@ -21,7 +21,7 @@ db.close();
 
 //db.each("SELECT dateModified FROM data ORDER BY dateModified DESC LIMIT 1", function(err, timeStart) {
 
-var start =  "2018-05-21T13:51:18.238441+03:00" 
+var start =  "2018-05-17T13:51:18.238441+03:00" 
 //var end  = formatTime(new Date());
 //var end  = "2017-01-03"
 var p=0; var p2=0;
@@ -80,7 +80,7 @@ client.request({url: 'https://public.api.openprocurement.org/api/2.3/contracts?o
 	
 	var description= "";
 	for (var it = 0; it < data.getJSON().data.items.length; it++) {
-		descriptionAll = data.getJSON().data.items[it].description.toLowerCase()+"; "+descriptionAll
+		description = data.getJSON().data.items[it].description.toLowerCase()+"; "+description
 	}	
 	
 	
