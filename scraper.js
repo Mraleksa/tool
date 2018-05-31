@@ -21,7 +21,7 @@ db.close();
 
 //db.each("SELECT dateModified FROM data ORDER BY dateModified DESC LIMIT 1", function(err, timeStart) {
 
-var start =  "2018-05-18T16:15:12.820758+03:00" 
+var start =  "2018-05-18T16:41:36.101895+03:00" 
 //var end  = formatTime(new Date());
 //var end  = "2017-01-03"
 var p=0; var p2=0;
