@@ -229,7 +229,7 @@ statement.finalize();
 	})
 	.then(function () {	
 	
-	if (p<400){setTimeout(function() {piv ();},10000);}		
+	if (p<200){setTimeout(function() {piv ();},10000);}		
 		else {
 			console.log("stop")
 			
