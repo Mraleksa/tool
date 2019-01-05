@@ -21,7 +21,7 @@ db.close();
 
 //db.each("SELECT dateModified FROM data ORDER BY dateModified DESC LIMIT 1", function(err, timeStart) {
 
-var start =  "2018-11-23T16:00:11.688030+02:00" 
+var start =  "2018-11-28T15:10:16.130534+02:00" 
 //var end  = formatTime(new Date());
 //var end  = "2017-01-03"
 var p=0; var p2=0;
@@ -229,7 +229,7 @@ statement.finalize();
 	})
 	.then(function () {	
 	
-	if (p<200){setTimeout(function() {piv ();},10000);}		
+	if (p<400){setTimeout(function() {piv ();},10000);}		
 		else {
 			console.log("stop")
 			
